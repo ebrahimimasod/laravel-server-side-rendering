@@ -35,7 +35,7 @@ class PageController
                 // اگر کش وجود نداشت، باید SSR اجرا شود
                 try {
                     // اجرای SSR توسط Node.js
-                    $process = new Process(['/usr/bin/nodejs', resource_path('js/server.js'), json_encode($pageData)]);
+                    $process = new Process(['/usr/bin/nodejs', resource_path('/js/server.js'), json_encode($pageData)]);
                     $process->run();
 
                     if (!$process->isSuccessful()) {
@@ -49,7 +49,7 @@ class PageController
                     Cache::put($cacheKey, $html, now()->addMinutes(10));
 
                 } catch (\Exception $e) {
-                    dd($e->getMessage());
+                  //  dd($e->getMessage());
                     // اگر SSR شکست خورد، به CSR بازگرد
                     return Inertia::render($page, $pageData);
                 }
