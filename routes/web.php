@@ -1,9 +1,7 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\App;
 
-Route::get('/', function () {
-    return view("app");
-});
+
+Route::get('/{page}', [PageController::class, 'renderPage'])->name('page.render');

@@ -12,8 +12,10 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "@inertiajs/vue3": "^1.2.0",
         "@vitejs/plugin-vue": "^5.1.4",
         "@vitejs/plugin-vue-jsx": "^4.0.1",
+        "@vue/server-renderer": "^3.5.11",
         "vue": "^3.5.11"
     }
 }

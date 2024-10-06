@@ -6,10 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "inertiajs/inertia-laravel": "^1.3",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
-        "symfony/process": "^7.1",
-        "masoud/laravel-server-side-rendering": "dev-main"
+        "symfony/process": "^7.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -26,12 +26,7 @@
             "Database\\Seeders\\": "database/seeders/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./masoud/laravel-server-side-rendering"
-        }
-    ],
+
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
