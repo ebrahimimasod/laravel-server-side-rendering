@@ -20,6 +20,7 @@ class PageController
         ];
 
 
+        return Inertia::render($page, $pageData);
 
         // بررسی هدر `Accept` برای تشخیص اینکه آیا SSR لازم است یا CSR
         if (Str::contains($request->header('Accept'),'text/html')) {
