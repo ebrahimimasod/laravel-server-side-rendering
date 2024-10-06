@@ -49,7 +49,7 @@ class PageController
                     Cache::put($cacheKey, $html, now()->addMinutes(10));
 
                 } catch (\Exception $e) {
-                  //  dd($e->getMessage());
+                   dd($e->getMessage());
                     // اگر SSR شکست خورد، به CSR بازگرد
                     return Inertia::render($page, $pageData);
                 }
